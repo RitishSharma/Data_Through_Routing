@@ -1,0 +1,12 @@
+<div class = "container">
+    <div class = "pointer-class text-color"><a (click) = "GoBack()"><h2><u>Go To Home</u></h2></a></div>
+    <div *ngIf = "result !== null || result !== undefined">
+        <ul *ngFor = "let ob of result">
+            <li>{{ob.Name}}
+                <ul *ngFor = "let obj of ob.Children">
+                    <li>{{obj.Name}}</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
